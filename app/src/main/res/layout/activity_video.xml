@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="videorawtest.example.com.videorawtest.MainActivity">
+    tools:context="videorawtest.example.com.videorawtest.VideoActivity">
 
-
-    <Button
-        android:id="@+id/btnPlayVideo"
+    <VideoView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PlayVideo" />
+        android:layout_height="match_parent"
+        android:id="@+id/videoView"
+        android:layout_gravity="center_vertical" />
 </LinearLayout>
