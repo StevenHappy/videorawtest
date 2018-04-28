@@ -1,5 +1,6 @@
 package videorawtest.example.com.videorawtest;
 
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,5 +19,8 @@ public class VideoActivity extends AppCompatActivity {
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"//"+ R.raw.test));
         videoView.start();
+
+        AssetManager assetManager = getAssets();
+
     }
 }
