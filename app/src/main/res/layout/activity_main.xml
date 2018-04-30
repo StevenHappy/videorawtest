@@ -6,48 +6,35 @@
     android:orientation="vertical"
     tools:context="videorawtest.example.com.videorawtest.MainActivity">
 
-
+    <TextView
+        android:id="@+id/qrcode_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Large Text"
+        android:textSize="30dp" />
+    <ImageView
+        android:id="@+id/qrcode_bitmap"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btnPlayVideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PlayVideo" />
 
-    <ImageView
-        android:id="@+id/qrcode_bitmap"
-        android:layout_width="fill_parent"
-        android:layout_height="300dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/result" />
 
-
-    <LinearLayout
-        android:id="@+id/layout_button"
+    <Button
+        android:id="@+id/btnScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="扫描二维码" />
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成二维码" />
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:textSize="30dp"
-            android:layout_weight="1"
-            android:text="Large Text" />
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="扫描二维码" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="生成二维码" />
-
-    </LinearLayout>
 </LinearLayout>
