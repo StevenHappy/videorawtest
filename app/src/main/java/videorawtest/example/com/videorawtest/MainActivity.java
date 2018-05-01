@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 import androidlibzxing.zxing.activity.CaptureActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
     private final static int SCANNIN_GREQUEST_CODE = 1;
 
     private TextView mTextView;
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (mBitmap == null)
                     return;
-                final Dialog dialog = new Dialog(MainActivity.this,R.style.edit_AlertDialog_style);
+                final Dialog dialog = new Dialog(MainActivity.this, R.style.edit_AlertDialog_style);
                 ImageView newImageView = getImageView();
                 dialog.setContentView(newImageView);
                 MainActivity.this.setVisible(false);
@@ -165,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
                         }).setCancelable(true).show();
             }
         });
+
+        Button btnGestureZoom = (Button) findViewById(R.id.btnGestureZoom);
+        btnGestureZoom.setOnClickListener(this);
     }
 
 
@@ -178,6 +181,18 @@ public class MainActivity extends AppCompatActivity {
                     mTextView.setText(bundle.getString("result"));
                     mImageView.setImageBitmap((Bitmap) data.getParcelableExtra("bitmap"));
                 }
+                break;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnGestureZoom:
+                Intent intent = new Intent(this,GestureZoomActivity.class);
+                startActivity(intent);
+                break;
+            default:
                 break;
         }
     }
