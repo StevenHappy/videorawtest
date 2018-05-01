@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".VideoActivity" />
         <activity android:name="androidlibzxing.zxing.activity.CaptureActivity" />
-        <activity android:name=".GestureZoomActivity"></activity>
+        <activity android:name=".GestureZoomActivity" />
+        <activity android:name=".PreferenceFragmentActivity" />
     </application>
 
 </manifest>
